@@ -25,9 +25,9 @@ for i=1:nbIter
     TestBar = VTBar;
     TestSaumon = VTSaumon;
 
-    ResBar = Myclassify(TestBar,muBarTrain,sigmaBarTrain,muSaumonTrain,sigmaSaumonTrain)
-    ResSaumon = Myclassify(TestSaumon,muBarTrain,sigmaBarTrain,muSaumonTrain,sigmaSaumonTrain)
+    ResBar = Myclassify(TestBar,muBarTrain,sigmaBarTrain,muSaumonTrain,sigmaSaumonTrain);
+    ResSaumon = Myclassify(TestSaumon,muBarTrain,sigmaBarTrain,muSaumonTrain,sigmaSaumonTrain);
     
-    nbBarErreur = 2*size(ResBar, 1) - sum(ResBar)
-    nbSaumonErreur = sum(ResSaumon) - size(ResSaumon, 2)    
+    nbBarErreur = size(ResBar, 2) - sum(ResBar)
+    nbSaumonErreur = sum(ResSaumon)
 end;

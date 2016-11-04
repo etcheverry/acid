@@ -11,9 +11,9 @@ Pc2 = Px2 * Pbar;
 
 for i=1:size(Pc1,1)
     if(Pc1(i) >= Pc2(i))
-        output_args(i) = 1;
+        output_args(i) = 0;
     else
-        output_args(i) = 2;
+        output_args(i) = 1;
     end
 end
 
