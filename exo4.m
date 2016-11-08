@@ -6,7 +6,7 @@ sigmaBar    = 4;
 sizeVT = 1000;
 VTSaumon = mvnrnd(muSaumon,sigmaSaumon, sizeVT);
 VTBar = mvnrnd(muBar, sigmaBar, sizeVT);
-nbIter   = 1;
+nbIter   = 100;
 sizeTrain = 100;
 
 for i=1:nbIter 
