@@ -1,5 +1,6 @@
 function  Res  = Myclassify(test, modelBar, modelSaumon, pBar, pSaumon)
 
+    %nvmpdf = multi dimensions
     probBar     = normpdf(test,modelBar.mu, modelBar.sigma)*pBar;
     probSaumon  = normpdf(test,modelSaumon.mu, modelSaumon.sigma)*pSaumon;
     
