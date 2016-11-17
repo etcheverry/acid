@@ -1,0 +1,6 @@
+function [proj1D1 proj1D2 proj1D3 proj2D1, proj2D2, proj2D3] ICA(C1, C2, C3)
+
+Mu1 = mean(C1);
+Mu2 = mean(C2);
+Mu3 = mean(C3);
+Mu = (Mu1 + 

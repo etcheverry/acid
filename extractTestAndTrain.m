@@ -1,21 +1,21 @@
-function [ TrainSaumon,TestSaumon,TrainBar, TestBar] = extractTestAndTrain(VTSaumon, VTBar, sizeTrain)
+function [ TrainC1, TestC1, TrainC2, TestC2] = extractTestAndTrain(VTC1, VTC2, sizeTrain)
 
-    sizeVTSaumon = size(VTSaumon,1);
-    sizeVTBar = size(VTBar, 1);
+    sizeVTC1 = size(VTC1,1);
+    sizeVTC2 = size(VTC2, 1);
     
-    SaumonIndice      = randperm(sizeVTSaumon);
-    TrainSaumonIndice = SaumonIndice(1:sizeTrain);
-    TestSaumonIndice  = SaumonIndice(sizeTrain+1:sizeVTSaumon);
+    C1Indice      = randperm(sizeVTC1);
+    TrainC1Indice = C1Indice(1:sizeTrain);
+    TestC1Indice  = C1Indice(sizeTrain+1:sizeVTC1);
         
-    BarIndice          = randperm(sizeVTBar);
-    TrainBarIndice     = BarIndice(1:sizeTrain);
-    TestBarIndice      = BarIndice(sizeTrain+1:sizeVTBar);
+    C2Indice          = randperm(sizeVTC2);
+    TrainC2Indice     = C2Indice(1:sizeTrain);
+    TestC2Indice      = C2Indice(sizeTrain+1:sizeVTC2);
+    
+    TrainC2     = VTC2(TrainC2Indice,:);
+    TrainC1  = VTC1(TrainC1Indice,:);
         
-    TrainBar     = VTBar(TrainBarIndice);
-    TrainSaumon  = VTSaumon(TrainSaumonIndice);
-        
-    TestBar      =  VTBar(TestBarIndice);
-    TestSaumon   =  VTSaumon(TestSaumonIndice);
+    TestC2      =  VTC2(TestC2Indice,:);
+    TestC1   =  VTC1(TestC1Indice,:);
 
 end
 
