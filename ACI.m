@@ -20,8 +20,8 @@ invSwSB = invSw*SB;
 
 [V,D] = eig(invSwSB);
 
-W2 = transpose([V(:,1),V(:,2)])
-W1 = transpose([V(:,1)])
+W2 = transpose([V(:,1),V(:,2)]);
+W1 = transpose([V(:,1)]);
 
 comp1 = C1 - repmat(Mu, size(C1, 1), 1);
 comp2 = C2 - repmat(Mu, size(C2, 1), 1);

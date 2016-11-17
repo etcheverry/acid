@@ -16,8 +16,8 @@ S3 = (size(comp3,1) - 1) * cov(comp3);
 
 [e, lambda] = eigs(S1+S2+S3);
 
-W2 = transpose([e(:,1),e(:,2)])
-W1 = transpose([e(:,1)])
+W2 = transpose([e(:,1),e(:,2)]);
+W1 = transpose([e(:,1)]);
 
 proj1D1 = transpose(W1*comp1');
 proj1D2 = transpose(W1*comp2');
